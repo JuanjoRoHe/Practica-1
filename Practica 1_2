@@ -1,0 +1,51 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+
+
+
+    \title{\textbf{Práctica 1, Ejercicio nº2}}
+    \author{Juan José Rodríguez Hernández}
+    \date{31/10/2022}
+    
+    \addtolength{\topmargin}{-2cm}
+    \addtolength{\textheight}{2cm}
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\section{Within the folder “files”, find a TEX file in whose content appears the string
+\\usepackage\{amsthm, amsmath\}. Note: use grep and escape the special
+characters. Complete the proof and answer the question.}
+
+
+
+Si $\alpha,\beta,\gamma$ son expresiones regulares entonces se cumple:
+  \begin{equation}
+  (\alpha+\beta) \gamma= \alpha \gamma+ \beta\gamma
+  \end{equation}
+
+Tomando la definición y usando sus reglas tenemos que:
+
+$$\mathcal{L}(((\alpha+\beta)\gamma))=\mathcal{L}((\alpha+\beta))\mathcal{L}(\gamma)=(\mathcal{L}(\alpha)\cup \mathcal{L}(\beta))\mathcal{L}(\gamma)=\mathcal{L}(\alpha)\mathcal{L}(\gamma)\cup \mathcal{L}(\beta)\mathcal{L}(\gamma)=$$\\
+$$\mathcal{L}(\alpha\gamma)+\mathcal{L}(\beta\gamma)=\mathcal{L}(\alpha\gamma+\beta\gamma)$$\\\\\\
+
+
+Consideramos $L=\{w\in \{a,b\}^* : w \textnormal{ no termina en } ab\}$. Un expresión regular generada por L es: \\
+\[\epsilon + (a + b) + (a + b)^*(aa + ba + bb)\]
+
+La explicación es la siguiente:
+\begin{itemize}
+\item $\epsilon$ genera a la cadena vacía.
+\item $(a + b)$ genera a las cadenas de longitud igual a uno.
+\item $(a + b)^*(aa + ba + bb)$ genera a cualquier cadena que tenga longitud mayor o igual que dos y que tenga cualquier terminación posible excepto $ab$.
+\end{itemize}
+\end{document}
+
+
+
+\end{document}
